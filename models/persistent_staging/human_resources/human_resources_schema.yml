@@ -10,7 +10,7 @@ models:
   - name: stg_employee
     description: "employee table from adventureworks"
     columns:
-      - name: employee_id
+      - name: business_entity_id
         tests:
           - unique
           - not_null

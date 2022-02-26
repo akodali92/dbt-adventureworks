@@ -14,7 +14,7 @@ final as (
         dbt_valid_from AS load_date,
         dbt_valid_to AS load_end_date
     from jobcandidate
-
+    where jobcandidate_id is not null
 )
 
 select * from final
