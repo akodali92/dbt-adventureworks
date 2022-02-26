@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: stg_product
+    description: "product table from adventureworks"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
