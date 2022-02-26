@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: stg_purchaseorderdetail
+    description: "purchase order detail table from adventureworks"
+    columns:
+      - name: purchase_order_detail_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_purchaseorderheader
+    description: "purchase order header table from adventureworks"
+    columns:
+      - name: purchase_order_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_shipmethod
+    description: "ship method table from adventureworks"
+    columns:
+      - name: ship_method_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_vendor
+    description: "vendor table from adventureworks"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
