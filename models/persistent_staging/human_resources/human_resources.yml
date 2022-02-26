@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_department
+    description: "department table from adventureworks"
+    columns:
+      - name: department_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_employee
+    description: "employee table from adventureworks"
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_employeedepartmenthistory
+    description: "employee department history table from adventureworks"
+    columns:
+      - name: employee_department_history_sk
+        tests:
+          - unique
+          - not_null
+  - name: stg_jobcandidate
+    description: "job candidate table from adventureworks"
+    columns:
+      - name: jobcandidate_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_shift
+    description: "shift table from adventureworks"
+    columns:
+      - name: shift_id
+        tests:
+          - unique
+          - not_null
