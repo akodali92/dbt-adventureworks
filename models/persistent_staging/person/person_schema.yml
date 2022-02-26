@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_address
+    description: "Address table from adventureworks"
+    columns:
+      - name: address_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_addresstype
+    description: "Address type table from adventureworks"
+    columns:
+      - name: address_type_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_businessentitaddress
+    description: "Business entity address id table from adventureworks"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_person
+    description: "Person table from adventureworks"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_stateprovince
+    description: "State province table from adventureworks"
+    columns:
+      - name: state_province_id
+        tests:
+          - unique
+          - not_null
