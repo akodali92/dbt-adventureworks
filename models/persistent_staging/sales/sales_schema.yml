@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: stg_customer
+    description: "customer table from adventureworks"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salesorderdetail
+    description: "sales order detail table from adventureworks"
+    columns:
+      - name: sales_order_detail_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salesorderheader
+    description: "sales order header table from adventureworks"
+    columns:
+      - name: sales_order_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salesperson
+    description: "sales person table from adventureworks"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salespersonquotahistory
+    description: "sales person quota history table from adventureworks"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salesterritory
+    description: "sales territory table from adventureworks"
+    columns:
+      - name: territory_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_salesterritoryhistory
+    description: "sales territory history table from adventureworks"
+    columns:
+      - name: sales_territory_history_sk
+        tests:
+          - unique
+          - not_null

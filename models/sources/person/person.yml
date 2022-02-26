@@ -1,0 +1,19 @@
+version: 2
+sources:
+  - name: aw_person
+    database: adventureworks_db
+    schema: person
+    tables:
+      - name: address
+      - name: addresstype
+      - name: businessentity
+      - name: businessentityaddress
+      - name: businessentitycontact
+      - name: contacttype
+      - name: countryregion
+      - name: emailaddress
+      - name: password
+      - name: person
+      - name: personphone
+      - name: phonenumbertype
+      - name: stateprovince
