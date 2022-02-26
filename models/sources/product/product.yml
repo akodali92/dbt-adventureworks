@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: aw_production
+    database: adventureworks_db
+    schema: production
+    tables: 
+      - name: product
