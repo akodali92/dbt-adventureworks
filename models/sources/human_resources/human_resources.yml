@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: human_resources
+  - name: aw_humanresources
     database: adventureworks_db
     schema: humanresources
     tables: 
