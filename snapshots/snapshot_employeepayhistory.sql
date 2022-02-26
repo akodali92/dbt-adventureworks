@@ -3,7 +3,7 @@
 {{
     config(
       target_schema='snapshots',
-      unique_key='businessentityid',
+      unique_key='businessentityid||"-"||ratechangedate',
 
       strategy='timestamp',
       updated_at='modifieddate'
