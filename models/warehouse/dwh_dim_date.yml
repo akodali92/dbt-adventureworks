@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dwh_dim_date
+    description: "columns combined to make ship method dimension"
+    columns:
+      - name: date_day
+        description: "Unique Date field"
+        tests:
+          - unique
+          - not_null
