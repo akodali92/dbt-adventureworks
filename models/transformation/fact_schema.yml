@@ -1,0 +1,23 @@
+version: 2
+models:
+    - name: fact_employeedepartmenthistory
+        description: "tables combined to make employee department history fact table"
+        columns:
+        - name: employee_department_sk
+            tests:
+            - unique
+            - not_null
+    - name: fact_purchaseorder
+        description: "Tables combined to make purchase order fact table"
+        columns:
+        - name: purchase_order_sk
+            tests:
+            - unique
+            - not_null
+    - name: fact_salesorderdetail
+        description: "Sales order detail and header tables to make fact table"
+        columns:
+        - name: sales_order_detail_sk
+            tests:
+            - unique
+            - not_null
