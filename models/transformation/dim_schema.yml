@@ -1,0 +1,86 @@
+version: 2
+models:
+  - name: dim_product
+    description: "Product table"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_customer
+    description: "Customer table"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_salesperson
+    description: "Sales person table"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_salesterritory
+    description: "Sales territory table"
+    columns:
+      - name: territory_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_shipmethod
+    description: "Ship method table"
+    columns:
+      - name: ship_method_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_address
+    description: "Address table"
+    columns:
+      - name: address_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_addresstype
+    description: "Address type table"
+    columns:
+      - name: address_type_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_person
+    description: "Person table"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_purchaseorderdetail
+    description: "Purchase order detail table"
+    columns:
+      - name: purchase_order_detail_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_purchaseorderheader
+    description: "Purchase order header table"
+    columns:
+      - name: purchase_order_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_vendor
+    description: "Vendor table"
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_department
+    description: "department table"
+    columns:
+      - name: department_id
+        tests:
+          - unique
+          - not_null

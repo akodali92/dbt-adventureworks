@@ -9,7 +9,7 @@ final as (
     select
         PURCHASEORDERID as purchase_order_id,
         REVISIONNUMBER as revision_number,
-        STATUS,
+        STATUS as status_id,
         EMPLOYEEID as employee_id,
         VENDORID as vendor_id,
         SHIPMETHODID as ship_method_id,
