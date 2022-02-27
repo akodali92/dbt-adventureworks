@@ -1,0 +1,86 @@
+version: 2
+models:
+  - name: dwh_dim_employee
+    description: "columns combined to make employee dimension"
+    columns:
+      - name: business_entity_id
+        description: "Primary key for all customers, vendors, and employees."
+        tests:
+          - unique
+          - not_null
+      - name: national_id_number
+        description: "Unique national identification number such as a social security number."
+        tests: 
+          - not_null
+      - name: business_key
+        description: "Placeholder"
+        tests: 
+          - not_null
+      - name: login_id
+        description: "Network login."
+        tests: 
+          - not_null
+      - name: org_node
+        description: "Where the employee is located in corporate hierarchy."
+        tests: 
+          - not_null
+      - name: job_title
+        description: "Work title such as Buyer or Sales Representative."
+        tests: 
+          - not_null
+      - name: birthdate
+        description: "Date of birth."
+        tests: 
+          - not_null
+      - name: marital_status
+        description: "M = Married, S = Single."
+        tests: 
+          - not_null
+      - name: gender
+        description: "M = Male, F = Female."
+        tests: 
+          - not_null
+      - name: hire_date
+        description: "Employee hired on this date."
+        tests: 
+          - not_null
+      - name: salaried_flag
+        description: "Job classification. 0 = Hourly, not exempt from collective bargaining. 1 = Salaried, exempt from collective bargaining. Default: 1"
+        tests: 
+          - not_null
+      - name: vacation_hours
+        description: "Number of available vacation hours."
+        tests: 
+          - not_null
+      - name: sick_leave_hours
+        description: "Number of available sick leave hours."
+        tests: 
+          - not_null
+      - name: row_guid
+        description: "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Time record was last updated."
+        tests: 
+          - not_null
+      - name: load_date
+        description: "When record was loaded."
+        tests: 
+          - not_null
+      - name: load_end_date
+        description: "When record was done loading."
+        tests: 
+          - not_null
+      - name: title
+        description: "A courtesy title. For example, Mr. or Ms."
+        tests: 
+          - not_null
+      - name: first_name
+        description: "First name of the person."
+        tests: 
+          - not_null
+      - name: last_name
+        description: "Last name of the person"
+        tests: 
+          - not_null
