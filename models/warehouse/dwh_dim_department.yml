@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: dwh_dim_department
+    description: "columns combined to make department dimension"
+    columns:
+      - name: department_id
+        description: "Primary key for Department records."
+        tests:
+          - unique
+          - not_null
+      - name: department_name
+        description: "Name of the department."
+        tests: 
+          - not_null
+      - name: group_name
+        description: "Name of the group to which the department belongs"
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Time record was last updated."
+        tests: 
+          - not_null
+      - name: load_date
+        description: "When record was loaded."
+        tests: 
+          - not_null
+      - name: load_end_date
+        description: "When record done loading."
+        tests: 
+          - not_null
