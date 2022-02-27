@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: dwh_dim_salesterritory
+    description: "columns combined to make sales territory dimension"
+    columns:
+      - name: territory_id
+        description: "ID of the territory in which the customer is located. Foreign key to SalesTerritory.SalesTerritoryID."
+        tests:
+          - unique
+          - not_null
+      - name: territory_name
+        description: "Name of the territory"
+        tests: 
+          - not_null
+      - name: country_region_code
+        description: "ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode."
+        tests: 
+          - not_null
+      - name: territory_group
+        description: "Geographic area to which the sales territory belong"
+        tests: 
+          - not_null
+      - name: sales_ytd
+        description: "Sales in the territory year to date."
+        tests: 
+          - not_null
+      - name: sales_last_year
+        description: "Sales in the territory the previous year."
+        tests: 
+          - not_null
+      - name: row_guid
+        description: "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Date record was last updated"
+        tests: 
+          - not_null
+      - name: load_date
+        description: "Date record was loaded"
+        tests: 
+          - not_null
+      
