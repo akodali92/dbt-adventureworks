@@ -1,0 +1,35 @@
+version: 2
+models:
+  - name: dwh_dim_shipmethod
+    description: "columns combined to make ship method dimension"
+    columns:
+      - name: ship_method_id
+        description: "Primary key for ShipMethod records.  Identity / Auto increment column"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Shipping company name"
+        tests: 
+          - not_null
+      - name: ship_base
+        description: "Minimum shipping charge.  Default 0.00"
+        tests: 
+          - not_null
+      - name: ship_rate
+        description: "Shipping charge per pound.  Default 0.00"
+        tests: 
+          - not_null
+      - name: row_guid
+        description: "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.  Default: newid()"
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Last date record was updated"
+        tests: 
+          - not_null
+      - name: load_date
+        description: "Date record was loaded"
+        tests: 
+          - not_null
+     
