@@ -1,0 +1,35 @@
+version: 2
+models:
+  - name: dwh_dim_shift
+    description: "columns combined to make shift dimension"
+    columns:
+      - name: shift_id
+        description: "PlacehPrimary key for Shift records.  Identity / Auto increment column older"
+        tests:
+          - unique
+          - not_null
+      - name: business_key
+        description: "Key that relates through business"
+        tests: 
+          - not_null
+      - name: shift_name
+        description: "Describes when the shift is"
+        tests: 
+          - not_null
+      - name: start_time
+        description: "Shift start time"
+        tests: 
+          - not_null
+      - name: end_time
+        description: "Shift end time"
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Date record was last updated"
+        tests: 
+          - not_null
+      - name: load_date
+        description: "Date record was loaded"
+        tests: 
+          - not_null
+     
