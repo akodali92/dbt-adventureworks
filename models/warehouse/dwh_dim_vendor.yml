@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: dwh_dim_vendor
+    description: "columns combined to make vendor dimension"
+    columns:
+      - name: business_entity_id
+        description: "Primary key. Foreign key to Vendor. BusinessEntityID"
+        tests:
+          - unique
+          - not_null
+      - name: account_number
+        description: "Vendor account (identification) number."
+        tests: 
+          - not_null
+      - name: name
+        description: "company name"
+        tests: 
+          - not_null
+      - name: credit_rating
+        description: "1 = Superior, 2 = Excellent, 3 = Above average, 4 = Average, 5 = Below average"
+        tests: 
+          - not_null
+      - name: preferred_vendor_status
+        description: "0 = Do not use if another vendor is available. 1 = Preferred over other vendors supplying the same product. Default: 1"
+        tests: 
+          - not_null
+      - name: active_flag
+        description: "0 = Vendor no longer used. 1 = Vendor is actively used. Default: 1"
+        tests: 
+          - not_null
+      - name: purchasing_web_service_url
+        description: "Vendor URL"
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Last updated date"
+        tests: 
+          - not_null
+      - name: load_date
+        description: "Date data was loaded"
+        tests: 
+          - not_null
+    
