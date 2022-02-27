@@ -1,0 +1,165 @@
+version: 2
+models:
+  - name: dwh_fact_salesorderdetail
+    description: "Sales order detail and header tables to make fact table"
+    columns:
+      - name: sales_order_detail_sk
+        tests:
+          - unique
+          - not_null
+      - name: business_entity_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.sales_order_detail_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.sales_order_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.product_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.special_offer_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.online_order_flag
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.account_number
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.customer_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sales_person_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.territory_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.bill_to_address_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.ship_to_address_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.ship_method_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sales_order_detail_last_update
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: order_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: due_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: ship_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sales_order_header_last_update
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.order_qty
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.unit_price
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.unit_price_discount
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sd.line_total
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.sub_total
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.tax_amt
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.freight
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sh.total_due
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: prod_standard_cost
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: prod_list_price
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: prod_weight
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: st_sales_ytd
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: st_sales_last_year
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sp_sales_quota
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sp_bonus
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sp_commission_pct
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sp_sales_ytd
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sp_sales_last_year
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sm_ship_base
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sm_ship_rate
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: last_update
+        description: "Placeholder"
+        tests:
+          - not_null

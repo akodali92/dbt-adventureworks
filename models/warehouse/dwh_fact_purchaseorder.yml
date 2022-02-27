@@ -1,0 +1,97 @@
+version: 2
+models:
+  - name: dwh_fact_purchaseorder
+    description: "Tables combined to make purchase order fact table"
+    columns:
+      - name: purchase_order_sk
+        tests:
+          - unique
+          - not_null
+      - name: purchase_order_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: purchase_order_detail_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: due_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: order_qty
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: product_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: unit_price
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: line_total
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: received_qty
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: rejected_qty
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: stocked_qty
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: revision_number
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: status_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: employee_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: vendor_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: ship_method_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: ship_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sub_total
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: tax_amt
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: freight
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: total_due
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: ship_base
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: ship_rate
+        description: "Placeholder"
+        tests:
+          - not_null

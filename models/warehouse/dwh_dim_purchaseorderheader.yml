@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: dwh_dim_purchaseorderheader
+    description: "columns combined to make purchaseorderheader dimension"
+    columns:
+      - name: purchase_order_id
+        description: "Primary key. Foreign key to PurchaseOrderHeader.PurchaseOrderID."
+        tests:
+          - unique
+          - not_null
+      - name: revision_number
+        description: "Incremental number to track changes to the purchase order over time."
+        tests: 
+          - not_null
+      - name: status
+        description: "Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 = Complete. Default: 1"
+        tests: 
+          - not_null
+      - name: employee_id
+        description: "Employee who created the purchase order. Foreign key to Employee.BusinessEntityID."
+        tests: 
+          - not_null
+      - name: vendor_id
+        description: "Vendor with whom the purchase order is placed. Foreign key to Vendor.BusinessEntityID."
+        tests: 
+          - not_null
+      - name: ship_method_id
+        description: "Shipping method. Foreign key to ShipMethod.ShipMethodID"
+        tests: 
+          - not_null
+      - name: order_date
+        description: "PlacehPurchase order creation date.older"
+        tests: 
+          - not_null
+      - name: ship_date
+        description: "Estimated shipment date from the vendor."
+        tests: 
+          - not_null
+      - name: sub_total
+        description: "Purchase order subtotal. Computed as SUM (PurchaseOrderDetail.LineTotal)for the appropriate PurchaseOrderID"
+        tests: 
+          - not_null
+      - name: tax_amt
+        description: "Tax amount"
+        tests: 
+          - not_null
+      - name: freight
+        description: "Shipping cost"
+        tests: 
+          - not_null
+      - name: total_due
+        description: "Total due to vendor. Computed as Subtotal + TaxAmt + Freight"
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Time record was last updated."
+        tests: 
+          - not_null
+      - name: load_date
+        description: "When record was loaded."
+        tests: 
+          - not_null
+      - name: order_status
+        description: "Status of the order"
+        tests: 
+          - not_null
+ 

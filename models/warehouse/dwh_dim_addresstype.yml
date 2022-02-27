@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: dwh_dim_addresstype
+    description: "columns combined to make address type dimension"
+    columns:
+      - name: address_type_id
+        description: "Key for AddressType records."
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Address type description. For example, Billing, Home, or Shipping."
+        tests: 
+          - not_null
+      - name: row_guid
+        description: "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Time record was last updated."
+        tests: 
+          - not_null
+      - name: load_date
+        description: "When record was loaded."
+        tests: 
+          - not_null

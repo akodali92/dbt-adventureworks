@@ -1,0 +1,58 @@
+version: 2
+models:
+  - name: dwh_fact_employeedepartmenthistory
+    description: "tables combined to make employee department history fact table"
+    columns:
+      - name: employee_department_sk
+        description: "Placeholder"
+        tests:
+          - unique
+          - not_null
+      - name: business_entity_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: national_id_number
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: department_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: shift_id
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: start_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: end_date
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: org_node
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: org_level
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: vacation_hours
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: sick_leave_hours
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: shift_start_time
+        description: "Placeholder"
+        tests:
+          - not_null
+      - name: shift_end_time
+        description: "Placeholder"
+        tests:
+          - not_null

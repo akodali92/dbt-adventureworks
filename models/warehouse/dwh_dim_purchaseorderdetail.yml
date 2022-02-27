@@ -1,0 +1,54 @@
+version: 2
+models:
+  - name: dwh_dim_purchaseorderdetail
+    description: "columns combined to make purchase order detail dimension"
+    columns:
+      - name: purchase_order_detail_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: "Product identification number. Foreign key to Product.ProductID."
+        tests: 
+          - not_null
+      - name: purchase_order_id
+        description: "Primary key. Foreign key to PurchaseOrderHeader.PurchaseOrderID."
+        tests: 
+          - not_null
+      - name: due_date
+        description: "Date the product is expected to be received."
+        tests: 
+          - not_null
+      - name: order_qty
+        description: "Quantity ordered."
+        tests: 
+          - not_null
+      - name: unit_price
+        description: "Vendor's selling price of a single product."
+        tests: 
+          - not_null
+      - name: line_total
+        description: "Per product subtotal. Computed as OrderQty * UnitPrice."
+        tests: 
+          - not_null
+      - name: received_qty
+        description: "Quantity actually received from the vendor."
+        tests: 
+          - not_null
+      - name: rejected_qty
+        description: "Quantity rejected during inspection"
+        tests: 
+          - not_null
+      - name: stocked_qty
+        description: "Quantity accepted into inventory. Computed as ReceivedQty - RejectedQty."
+        tests: 
+          - not_null
+      - name: last_update
+        description: "Time record was last updated."
+        tests: 
+          - not_null
+      - name: load_date
+        description: "When record was loaded."
+        tests: 
+          - not_null
