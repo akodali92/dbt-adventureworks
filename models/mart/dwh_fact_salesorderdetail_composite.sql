@@ -58,15 +58,15 @@ final as (
   select
     sod.*,
     {{ dbt_utils.star(from=ref('dwh_dim_address'), relation_alias='a', except=["business_entity_id"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_addresstype'), relation_alias='at', except=["business_entity_id"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_addresstype'), relation_alias='at', except=["business_entity_id", "last_update"]) }},
     {{ dbt_utils.star(from=ref('dwh_dim_customer'), relation_alias='c', except=["business_entity_id"]) }},
     {{ dbt_utils.star(from=ref('dwh_dim_date'), relation_alias='d') }},
-    {{ dbt_utils.star(from=ref('dwh_dim_person'), relation_alias='p', except=["business_entity_id"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_product'), relation_alias='pr', except=["product_id", "weight", "list_price", "standard_cost"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_salesperson'), relation_alias='sp', except=["business_entity_id", "territory_id", "sales_quota", "bonus", "sp_sales_last_year", "sp_sales_ytd", "commission_pct"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_salesterritory'), relation_alias='st', except=["territory_id"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_shipmethod'), relation_alias='sm', except=["ship_method_id"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_vendor'), relation_alias='v', except=["business_entity_id", "account_number"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_person'), relation_alias='p', except=["business_entity_id", "last_update"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_product'), relation_alias='pr', except=["product_id", "weight", "list_price", "standard_cost", "last_update"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_salesperson'), relation_alias='sp', except=["business_entity_id", "last_update", "territory_id", "sales_quota", "bonus", "sp_sales_last_year", "sp_sales_ytd", "commission_pct"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_salesterritory'), relation_alias='st', except=["territory_id", "last_update"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_shipmethod'), relation_alias='sm', except=["ship_method_id", "last_update"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_vendor'), relation_alias='v', except=["business_entity_id", "account_number", "last_update"]) }},
     d.date_day as order_date_day,
     d.last_day_of_week as order_last_day_of_week
     
