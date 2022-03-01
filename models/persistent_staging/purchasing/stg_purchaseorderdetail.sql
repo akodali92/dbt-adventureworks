@@ -20,6 +20,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from purchaseorderdetail
+    where purchase_order_detail_id is not null
 
 )
 

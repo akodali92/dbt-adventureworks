@@ -35,6 +35,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from product
+    where product_id is not null
 
 )
 

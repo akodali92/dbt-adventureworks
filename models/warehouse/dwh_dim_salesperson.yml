@@ -10,12 +10,8 @@ models:
           - not_null
       - name: territory_id
         description: "Territory currently assigned to. Foreign key to SalesTerritory.SalesTerritoryID."
-        tests: 
-          - not_null
       - name: sales_quota
         description: "Projected yearly sales."
-        tests: 
-          - not_null
       - name: bonus
         description: "Bonus due if quota is met."
         tests: 

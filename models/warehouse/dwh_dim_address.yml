@@ -5,9 +5,6 @@ models:
     columns:
       - name: business_entity_id
         description: "Primary key for all customers, vendors, and employees. Identity / Auto increment column"
-        tests:
-          - unique
-          - not_null
       - name: address_type_id
         description: "Key for AddressType records."
         tests: 
@@ -26,8 +23,6 @@ models:
           - not_null
       - name: address_line_2
         description: "Second street address line."
-        tests: 
-          - not_null
       - name: city
         description: "Name of the city."
         tests: 

@@ -38,14 +38,14 @@ snapshots:
 models:
   dbt_adventureworks:
     persistent_staging:
-      schema: persistent_staging
-      materialization: view
+      schema: stg
+      materialized: view
     transformation:
-      schema: transformation
-      materialization: table
+      schema: tsf
+      materialized: table
     warehouse:
-      schema: warehouse
-      materialization: table
+      schema: wh
+      materialized: table
     mart:
       schema: mart
-      materialization: table
+      materialized: table

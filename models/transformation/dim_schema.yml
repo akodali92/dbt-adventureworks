@@ -10,10 +10,7 @@ models:
   - name: dim_customer
     description: "Customer table"
     columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
+      - name: business_entity_id
   - name: dim_salesperson
     description: "Sales person table"
     columns:

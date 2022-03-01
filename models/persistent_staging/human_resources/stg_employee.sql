@@ -26,6 +26,7 @@ final as (
         dbt_valid_from AS load_date,
         dbt_valid_to AS load_end_date
     from employee
+    where business_entity_id is not null
 
 )
 

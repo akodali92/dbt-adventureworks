@@ -26,5 +26,3 @@ models:
           - not_null
       - name: load_end_date
         description: "When record done loading."
-        tests: 
-          - not_null

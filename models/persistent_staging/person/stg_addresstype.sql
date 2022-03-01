@@ -13,6 +13,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from addresstype
+    where address_type_id is not null
 
 )
 

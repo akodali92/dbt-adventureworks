@@ -18,6 +18,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from salesperson
+    where business_entity_id is not null
 
 )
 

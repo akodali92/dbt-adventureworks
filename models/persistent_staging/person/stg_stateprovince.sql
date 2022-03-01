@@ -16,6 +16,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from stateprovince
+    where state_province_id is not null
 
 )
 
