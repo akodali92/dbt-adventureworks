@@ -22,12 +22,8 @@ models:
           - not_null
       - name: org_node
         description: "Where the employee is located in corporate hierarchy."
-        tests: 
-          - not_null
       - name: job_title
         description: "Work title such as Buyer or Sales Representative."
-        tests: 
-          - not_null
       - name: birthdate
         description: "Date of birth."
         tests: 
@@ -42,8 +38,6 @@ models:
           - not_null
       - name: hire_date
         description: "Employee hired on this date."
-        tests: 
-          - not_null
       - name: salaried_flag
         description: "Job classification. 0 = Hourly, not exempt from collective bargaining. 1 = Salaried, exempt from collective bargaining. Default: 1"
         tests: 
@@ -70,12 +64,8 @@ models:
           - not_null
       - name: load_end_date
         description: "When record was done loading."
-        tests: 
-          - not_null
       - name: title
         description: "A courtesy title. For example, Mr. or Ms."
-        tests: 
-          - not_null
       - name: first_name
         description: "First name of the person."
         tests: 

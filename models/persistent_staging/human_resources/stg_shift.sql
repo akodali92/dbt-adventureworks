@@ -15,6 +15,7 @@ final as (
         modifieddate as last_update,
         dbt_valid_from AS load_date
     from shift
+    where shift_id is not null
 
 )
 

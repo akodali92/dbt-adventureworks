@@ -14,6 +14,7 @@ final as (
         dbt_valid_from AS load_date,
         dbt_valid_to AS load_end_date
     from department
+    where department_id is not null
 
 )
 

@@ -18,32 +18,24 @@ models:
           - not_null
       - name: title
         description: "A courtesy title. For example, Mr. or Ms."
-        tests: 
-          - not_null
       - name: first_name
         description: "First name of the person."
         tests: 
           - not_null
       - name: middle_name
         description: "Middle name or middle initial of the person."
-        tests: 
-          - not_null
       - name: last_name
         description: "Last name of the person."
         tests: 
           - not_null
       - name: suffix
         description: "Surname suffix. For example, Sr. or Jr"
-        tests: 
-          - not_null
       - name: email_promotion
         description: "0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners."
         tests: 
           - not_null
       - name: additional_contact_info
         description: "Additional contact information about the person stored in xml format."
-        tests: 
-          - not_null
       - name: demographics
         description: "Personal information such as hobbies, and income collected from online shoppers. Used for sales analysis."
         tests: 

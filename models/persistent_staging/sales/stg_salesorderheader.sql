@@ -35,6 +35,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from salesorderheader
+    where sales_order_id is not null
 
 )
 

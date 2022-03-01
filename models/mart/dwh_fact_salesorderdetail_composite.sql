@@ -57,16 +57,16 @@ final as (
 
   select
     sod.*,
-    {{ dbt_utils.star(from=ref('dwh_dim_address'), relation_alias='a', except=["business_entity_id"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_addresstype'), relation_alias='at', except=["business_entity_id", "last_update"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_customer'), relation_alias='c', except=["business_entity_id"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_address'), relation_alias='a', except=["business_entity_id", "last_update", "row_guid"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_addresstype'), relation_alias='at', except=["business_entity_id", "row_guid", "last_update", "load_date", "address_type_id"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_customer'), relation_alias='c', except=["business_entity_id", "address_id", "address_type", "address_line_1", "city", "state_province", "postal_code", "country_region_abbv"]) }},
     {{ dbt_utils.star(from=ref('dwh_dim_date'), relation_alias='d') }},
-    {{ dbt_utils.star(from=ref('dwh_dim_person'), relation_alias='p', except=["business_entity_id", "last_update"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_product'), relation_alias='pr', except=["product_id", "weight", "list_price", "standard_cost", "last_update"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_salesperson'), relation_alias='sp', except=["business_entity_id", "last_update", "territory_id", "sales_quota", "bonus", "sp_sales_last_year", "sp_sales_ytd", "commission_pct"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_salesterritory'), relation_alias='st', except=["territory_id", "last_update"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_shipmethod'), relation_alias='sm', except=["ship_method_id", "last_update"]) }},
-    {{ dbt_utils.star(from=ref('dwh_dim_vendor'), relation_alias='v', except=["business_entity_id", "account_number", "last_update"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_person'), relation_alias='p', except=["business_entity_id", "row_guid", "last_update", "load_date", "title", "first_name", "last_name"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_product'), relation_alias='pr', except=["product_id", "row_guid", "weight", "list_price", "standard_cost", "last_update", "load_date", "name"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_salesperson'), relation_alias='sp', except=["business_entity_id", "row_guid", "last_update", "load_date", "territory_id", "sales_quota", "bonus", "sp_sales_last_year", "sp_sales_ytd", "commission_pct"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_salesterritory'), relation_alias='st', except=["territory_id", "row_guid", "last_update", "load_date", "territory_name", "sales_ytd", "sales_last_year"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_shipmethod'), relation_alias='sm', except=["ship_method_id", "row_guid", "last_update", "load_date", "name"]) }},
+    {{ dbt_utils.star(from=ref('dwh_dim_vendor'), relation_alias='v', except=["business_entity_id", "account_number", "last_update", "load_date", "name"]) }},
     d.date_day as order_date_day,
     d.last_day_of_week as order_last_day_of_week
     

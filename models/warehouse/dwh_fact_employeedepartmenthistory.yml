@@ -30,16 +30,10 @@ models:
           - not_null
       - name: end_date
         description: "Placeholder"
-        tests:
-          - not_null
       - name: org_node
         description: "Placeholder"
-        tests:
-          - not_null
       - name: org_level
         description: "Placeholder"
-        tests:
-          - not_null
       - name: vacation_hours
         description: "Placeholder"
         tests:

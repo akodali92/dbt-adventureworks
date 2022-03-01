@@ -39,13 +39,13 @@ models:
   dbt_adventureworks:
     persistent_staging:
       schema: stg
-      materialization: view
+      materialized: view
     transformation:
       schema: tsf
-      materialization: table
+      materialized: table
     warehouse:
       schema: wh
-      materialization: table
+      materialized: table
     mart:
       schema: mart
-      materialization: table
+      materialized: table

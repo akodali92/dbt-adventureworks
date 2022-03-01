@@ -17,6 +17,7 @@ final as (
         modifieddate as last_update,
         CURRENT_TIMESTAMP() AS load_date
     from vendor
+    where business_entity_id is not null
 
 )
 

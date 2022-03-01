@@ -5,53 +5,28 @@ models:
     columns:
       - name: customer_address_type_sk
         description: "Surrogate key created for the customer dimension."
-        tests:
-          - unique
-          - not_null
       - name: business_entity_id
         description: "Key for all customers, vendors, and employees."
-        tests: 
-          - not_null
       - name: address_id
         description: "Key for address records"
-        tests: 
-          - not_null
       - name: title
         description: "A courtesy title. For example, Mr. or Ms"
-        tests: 
-          - not_null
       - name: first_name
         description: "First name of the person."
-        tests: 
-          - not_null
       - name: last_name
         description: "Last name of the person."
-        tests: 
-          - not_null
       - name: address_type
         description: "Address type description. For example, Billing, Home, or Shipping."
-        tests: 
-          - not_null
       - name: address_line_1
         description: "First street address line."
-        tests: 
-          - not_null
       - name: city
         description: "Name of the city."
-        tests: 
-          - not_null
       - name: state_province
         description: "State or province description."
-        tests: 
-          - not_null
       - name: country_region_abbv
         description: "ISO standard country or region code"
-        tests: 
-          - not_null
       - name: postal_code
         description: "Postal code for the street address."
-        tests: 
-          - not_nullit
       - name: territory_name
         description: "Sales territory description."
         tests: 

@@ -30,8 +30,6 @@ models:
           - not_null
       - name: purchasing_web_service_url
         description: "Vendor URL"
-        tests: 
-          - not_null
       - name: last_update
         description: "Last updated date"
         tests: 
