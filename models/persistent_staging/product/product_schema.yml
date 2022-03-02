@@ -4,6 +4,7 @@ models:
     description: "product table from adventureworks"
     columns:
       - name: product_id
+      - description: Product ID
         tests:
           - unique
           - not_null
